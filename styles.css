@@ -1,0 +1,151 @@
+:root {
+  --ink: #1d1b2c;
+  --muted: #6d6880;
+  --purple: #7952b3;
+  --purple-deep: #5e3f8b;
+  --canvas: #f4f1fb;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+  color: var(--ink);
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  background:
+    radial-gradient(circle at 15% 20%, rgb(204 181 240 / 55%), transparent 30rem),
+    radial-gradient(circle at 90% 92%, rgb(178 220 239 / 54%), transparent 28rem),
+    var(--canvas);
+}
+
+.login-shell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 2rem 1rem;
+}
+
+.login-card {
+  width: 100%;
+  max-width: 27.5rem;
+  padding: 2.5rem;
+  background: rgb(255 255 255 / 94%);
+  border: 1px solid rgb(121 82 179 / 12%);
+  border-radius: 1.25rem;
+  box-shadow: 0 1.25rem 3.75rem rgb(52 29 91 / 15%);
+}
+
+.brand-mark {
+  display: block;
+  margin: 0 auto 1.25rem;
+}
+
+.eyebrow {
+  margin: 0 0 .5rem;
+  color: var(--purple-deep);
+  font-size: .78rem;
+  font-weight: 750;
+  letter-spacing: .12em;
+  text-align: center;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(1.65rem, 5vw, 2rem);
+  font-weight: 750;
+  letter-spacing: -.025em;
+  text-align: center;
+}
+
+.intro {
+  margin: .6rem 0 1.9rem;
+  color: var(--muted);
+  font-size: 1rem;
+  text-align: center;
+}
+
+.form-label,
+.form-check-label {
+  font-size: .95rem;
+  font-weight: 600;
+}
+
+.form-control {
+  min-height: 3rem;
+  border-color: #d6d1e1;
+  border-radius: .6rem;
+}
+
+.form-control:focus {
+  border-color: var(--purple);
+  box-shadow: 0 0 0 .25rem rgb(121 82 179 / 17%);
+}
+
+.password-label-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+a {
+  color: var(--purple-deep);
+  font-size: .9rem;
+  font-weight: 650;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #432966;
+  text-decoration: underline;
+}
+
+.form-check-input:checked {
+  background-color: var(--purple);
+  border-color: var(--purple);
+}
+
+.form-check-input:focus {
+  border-color: var(--purple);
+  box-shadow: 0 0 0 .25rem rgb(121 82 179 / 17%);
+}
+
+.btn-primary {
+  min-height: 3rem;
+  border-color: var(--purple);
+  border-radius: .6rem;
+  background-color: var(--purple);
+  font-weight: 700;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  border-color: var(--purple-deep);
+  background-color: var(--purple-deep);
+}
+
+.form-message {
+  min-height: 1.25rem;
+  margin: .9rem 0 0;
+  color: #19763a;
+  font-size: .9rem;
+  text-align: center;
+}
+
+.account-note {
+  margin: 1.5rem 0 0;
+  color: var(--muted);
+  font-size: .92rem;
+  text-align: center;
+}
+
+@media (max-width: 420px) {
+  .login-card {
+    padding: 2rem 1.25rem;
+  }
+}

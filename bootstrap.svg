@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 72 72" role="img" aria-labelledby="title">
+  <title id="title">Bootstrap</title>
+  <rect width="72" height="72" rx="16" fill="#7952b3"/>
+  <path fill="#fff" d="M20 15h20c8.2 0 13 4.1 13 10.9 0 5.4-3.4 8.8-7.6 10.1 5.2 1.1 9.6 4.7 9.6 11.5C55 55.5 49.4 59 39.2 59H20V15Zm11 8.5v8.7h7c3.4 0 5-1.4 5-4.4 0-2.8-1.8-4.3-5.2-4.3H31Zm0 16.6v10.2h8.2c3.8 0 5.8-1.7 5.8-5.2 0-3.4-2.1-5-5.9-5H31Z"/>
+</svg>

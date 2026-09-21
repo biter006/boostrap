@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Biểu mẫu đăng nhập tài khoản sử dụng Bootstrap 5.">
+  <title>Đăng nhập | Bootstrap</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='15' fill='%237952b3'/%3E%3Cpath fill='white' d='M18 14h19c8 0 12 4 12 10 0 5-3 8-7 9 5 1 9 4 9 10 0 7-5 11-14 11H18V14Zm10 8v8h8c3 0 4-1 4-4s-2-4-5-4h-7Zm0 16v8h9c3 0 5-1 5-4s-2-4-5-4h-9Z'/%3E%3C/svg%3E">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="login-shell">
+    <section class="login-card" aria-labelledby="login-title">
+      <img class="brand-mark" src="bootstrap.svg" width="72" height="72" alt="Biểu tượng Bootstrap">
+      <p class="eyebrow">CỔNG THÀNH VIÊN</p>
+      <h1 id="login-title">Đăng nhập tài khoản</h1>
+      <p class="intro">Nhập thông tin của bạn để tiếp tục.</p>
+
+      <form id="login-form" novalidate>
+        <div class="mb-3">
+          <label class="form-label" for="inputEmail">Địa chỉ email</label>
+          <input class="form-control" type="email" id="inputEmail" name="email" placeholder="you@example.com" autocomplete="email" required autofocus>
+          <div class="invalid-feedback">Vui lòng nhập địa chỉ email hợp lệ.</div>
+        </div>
+
+        <div class="mb-3">
+          <div class="password-label-row">
+            <label class="form-label" for="inputPassword">Mật khẩu</label>
+            <a href="#forgot-password">Quên mật khẩu?</a>
+          </div>
+          <input class="form-control" type="password" id="inputPassword" name="password" placeholder="Nhập mật khẩu" autocomplete="current-password" required>
+          <div class="invalid-feedback">Vui lòng nhập mật khẩu.</div>
+        </div>
+
+        <div class="form-check mb-4">
+          <input class="form-check-input" type="checkbox" value="remember-me" id="rememberMe" name="remember-me">
+          <label class="form-check-label" for="rememberMe">Ghi nhớ đăng nhập</label>
+        </div>
+
+        <button class="btn btn-primary w-100" type="submit">Đăng nhập</button>
+        <p id="form-message" class="form-message" role="status" aria-live="polite"></p>
+      </form>
+
+      <p class="account-note">Chưa có tài khoản? <a href="#register">Đăng ký ngay</a></p>
+    </section>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    const form = document.querySelector('#login-form');
+    const message = document.querySelector('#form-message');
+
+    form.addEventListener('submit', (event) => {
+      event.preventDefault();
+      form.classList.add('was-validated');
+
+      if (form.checkValidity()) {
+        message.textContent = 'Thông tin hợp lệ. Bạn đã sẵn sàng đăng nhập.';
+        message.classList.add('is-success');
+      } else {
+        message.textContent = '';
+        message.classList.remove('is-success');
+      }
+    });
+  </script>
+</body>
+</html>
